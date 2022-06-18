@@ -57,3 +57,5 @@ Example AJAX calls to ping APIs (with and without Authorization) are present und
 - Some methods in GameService can be moved to the MatchService, therefore it can refer to MatchService instead of Match related repository classes.
 - If no results are found while calling an Endpoint, it should be retrieved a NoContent result instead of 200 Ok.
 - Add Unit tests. (Due to time constraints, I will add some UnitTests after submiting the assignment).
+- Improve github commit messages.
+- Adopt Clean Architecture / DDD principles. Adapt project structure.
