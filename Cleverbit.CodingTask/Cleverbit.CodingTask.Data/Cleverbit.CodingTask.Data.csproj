@@ -10,6 +10,7 @@
 
 	<ItemGroup>
 	  <ProjectReference Include="..\Cleverbit.CodingTask.Utilities\Cleverbit.CodingTask.Utilities.csproj" />
+	  <ProjectReference Include="..\Cleverbit.CodingTask.Domain\Cleverbit.CodingTask.Domain.csproj" />
 	</ItemGroup>
 
 </Project>

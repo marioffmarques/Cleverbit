@@ -1,4 +1,8 @@
+using Cleverbit.CodingTask.Application.Game;
+using Cleverbit.CodingTask.Application.Match;
 using Cleverbit.CodingTask.Data;
+using Cleverbit.CodingTask.Data.Repositories;
+using Cleverbit.CodingTask.Domain.Repositories;
 using Cleverbit.CodingTask.Host.Auth;
 using Cleverbit.CodingTask.Utilities;
 using Microsoft.AspNetCore.Authentication;
@@ -31,6 +35,13 @@ namespace Cleverbit.CodingTask.Host
                 options => options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
 
             services.AddSingleton<IHashService>(new HashService(configuration.GetSection("HashSalt").Get<string>()));
+            services.AddSingleton<IDateTimeProvider, DateTimeProvider>();
+
+            services.AddScoped<IMatchRepository, MatchRepository>();
+            services.AddScoped<IMatchTypeRepository, MatchTypeRepository>();
+            services.AddScoped<IUserMatchRepository, UserMatchRepository>();
+            services.AddScoped<IMatchService, MatchService>();
+            services.AddScoped<IGameService, GameService>();
 
             services.AddControllers();
 

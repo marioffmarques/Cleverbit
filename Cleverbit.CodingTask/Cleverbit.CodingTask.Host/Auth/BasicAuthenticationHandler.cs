@@ -1,7 +1,8 @@
 ﻿using Cleverbit.CodingTask.Data;
-using Cleverbit.CodingTask.Data.Models;
+using Cleverbit.CodingTask.Domain.Entities;
 using Cleverbit.CodingTask.Utilities;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
@@ -87,7 +88,7 @@ namespace Cleverbit.CodingTask.Host.Auth
 
             var claims = new[] {
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                new Claim(ClaimTypes.Name, user.UserName),
+                new Claim(ClaimTypes.Name, user.UserName)
             };
             var identity = new ClaimsIdentity(claims, Scheme.Name);
             var principal = new ClaimsPrincipal(identity);

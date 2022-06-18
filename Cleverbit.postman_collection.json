@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "54b03163-cf8c-404c-8794-a11df8f99104",
+		"name": "Cleverbit",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Play Game",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Password2",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "User2",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44337/api/game/play",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44337",
+					"path": [
+						"api",
+						"game",
+						"play"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Matches Results",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44337/api/match/results",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44337",
+					"path": [
+						"api",
+						"match",
+						"results"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Current Match Stats",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Password2",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "User2",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44337/api/match",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44337",
+					"path": [
+						"api",
+						"match"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

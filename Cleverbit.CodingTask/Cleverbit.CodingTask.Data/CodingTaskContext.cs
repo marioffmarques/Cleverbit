@@ -1,4 +1,5 @@
-﻿using Cleverbit.CodingTask.Data.Models;
+﻿using Cleverbit.CodingTask.Data.EntityConfig;
+using Cleverbit.CodingTask.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace Cleverbit.CodingTask.Data
@@ -11,10 +12,16 @@ namespace Cleverbit.CodingTask.Data
         }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<MatchType> MatchTypes { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<User>().ToTable(nameof(User));
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.ApplyConfiguration(new UserConfig());
+            modelBuilder.ApplyConfiguration(new MatchConfig());
+            modelBuilder.ApplyConfiguration(new MatchTypeConfig());
+            modelBuilder.ApplyConfiguration(new UserMatchConfig());
         }
     }
 }
