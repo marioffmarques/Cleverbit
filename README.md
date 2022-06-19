@@ -59,3 +59,4 @@ Example AJAX calls to ping APIs (with and without Authorization) are present und
 - Add Unit tests. (Due to time constraints, I will add some UnitTests after submiting the assignment).
 - Improve github commit messages.
 - Adopt Clean Architecture / DDD principles. Adapt project structure.
+- The Api is currently responsible for determining the Active Game. A Rest Api shouldn't store any state. To avoid it, I'd receive the Match id as a parameter on "Play" endpoint.

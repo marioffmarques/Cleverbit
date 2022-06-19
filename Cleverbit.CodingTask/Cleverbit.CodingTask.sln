@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cleverbit.CodingTask.Domain
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cleverbit.CodingTask.Application", "Cleverbit.CodingTask.Application\Cleverbit.CodingTask.Application.csproj", "{CA83940E-9843-406B-9AE0-ADCBE63BF704}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cleverbit.CodingTask.Tests.Unit", "Cleverbit.CodingTask.Tests.Unit\Cleverbit.CodingTask.Tests.Unit.csproj", "{87E3EC0C-257C-48C7-94BB-863E72EFA47D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{CA83940E-9843-406B-9AE0-ADCBE63BF704}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA83940E-9843-406B-9AE0-ADCBE63BF704}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA83940E-9843-406B-9AE0-ADCBE63BF704}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87E3EC0C-257C-48C7-94BB-863E72EFA47D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87E3EC0C-257C-48C7-94BB-863E72EFA47D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87E3EC0C-257C-48C7-94BB-863E72EFA47D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87E3EC0C-257C-48C7-94BB-863E72EFA47D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

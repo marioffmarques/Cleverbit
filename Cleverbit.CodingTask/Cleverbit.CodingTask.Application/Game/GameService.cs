@@ -38,7 +38,7 @@ namespace Cleverbit.CodingTask.Application.Game
             {
                 activeMatch = new Domain.Entities.Match()
                 {
-                    MatchTypeId = (await _matchTypeRepository.GetAllAsync()).First().Id, // TBD: Validate if MatchTypes exists on the database
+                    MatchTypeId = (await _matchTypeRepository.GetAllAsync()).First().Id, // TBD: Validate if MatchTypes exists on the database (To avoid NRE)
                     MatchStart = _dateProvider.GetUtcNow()
                 };
 
